@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include <Components/LMAWeaponComponent.h>
 #include "LMADefaultCharacter.generated.h"
 
 class UCameraComponent;
@@ -21,6 +22,8 @@ public:
 	ALMADefaultCharacter();
 
 protected:
+	virtual void BeginPlay() override;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components")
 	USpringArmComponent* SpringArmComponent;
 
@@ -33,7 +36,8 @@ protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components|Health")
 	ULMAHealthComponent* HealthComponent;
 
-	virtual void BeginPlay() override;
+	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Components|Weapon")
+	ULMAWeaponComponent* WeaponComponent;
 
 	UPROPERTY()
 	UDecalComponent* CurrentCursor = nullptr;
@@ -42,13 +46,13 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Cursor")
 	FVector CursorSize = FVector(20.0f, 40.0f, 40.0f);
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Sprint")
-	bool SprintOn = false;
-
 public:
 	virtual void Tick(float DeltaTime) override;
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
+	bool SprintOn = false;
 
 	UFUNCTION()
 	ULMAHealthComponent* GetHealthComponent() const { return HealthComponent; }
@@ -62,9 +66,9 @@ private:
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 
-	UPROPERTY(EditAnywhere, Category = "Sprint");
+	UPROPERTY(EditAnywhere, Category = "Movement");
 	float SprintSpeed = 600.0f;
-	UPROPERTY(EditAnywhere, Category = "Sprint");
+	UPROPERTY(EditAnywhere, Category = "Movement");
 	float WalkSpeed = 300.0f;
 	bool Shift = false;
 
