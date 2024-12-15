@@ -51,11 +51,21 @@ public:
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement")
-	bool SprintOn = false;
-
 	UFUNCTION()
 	ULMAHealthComponent* GetHealthComponent() const { return HealthComponent; }
+	UFUNCTION()
+	ULMAStaminaComponent* GetStaminaComponent() const { return StaminaComponent; }
+	UFUNCTION()
+	ULMAWeaponComponent* GetWeaponComponent() const { return WeaponComponent; }
+
+	UFUNCTION()
+	void SetCharacterMaxWalkSpeed(float Speed);
+
+	UFUNCTION()
+	bool GetCharacterForwardDirection();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Movement")
+	bool SprintOnAnim = false;
 
 private:
 	float YRotation = -75.0f;
@@ -66,17 +76,10 @@ private:
 	void MoveForward(float Value);
 	void MoveRight(float Value);
 
-	UPROPERTY(EditAnywhere, Category = "Movement");
-	float SprintSpeed = 600.0f;
-	UPROPERTY(EditAnywhere, Category = "Movement");
-	float WalkSpeed = 300.0f;
-	bool Shift = false;
-
-	void ShiftOn();
-	void ShiftOff();
+	bool IsMoveForward = false;
 
 	UPROPERTY(EditAnywhere, Category = "Zoom")
-	float MinZoom = 700.0f;
+	float MinZoom = 800.0f;
 	UPROPERTY(EditAnywhere, Category = "Zoom")
 	float MaxZoom = 3400.0f;
 	UPROPERTY(EditAnywhere, Category = "Zoom")
@@ -85,10 +88,27 @@ private:
 	void ZoomUp();
 	void ZoomDown();
 
-	UPROPERTY(EditDefaultsOnly, Category = "Animation")
+	UPROPERTY(EditDefaultsOnly, Category = "Death|Animation")
 	UAnimMontage* DeathMontage;
 
+	UFUNCTION()
 	void OnDeath();
 	void RotationPlayerOnCursor();
-	void OnHealthChanged(float NewHealth);
+
+	UPROPERTY(EditDefaultsOnly, Category = "Death")
+	float DeathCameraYaw = 0.0f;
+	UPROPERTY(EditAnywhere, Category = "Death")
+	float DeathCameraArmLenght = 1000.0f;
+	bool DeathMinZoom = false;
+	FVector DeathLocation;
+
+	FTimerDelegate DeathCameraDelegate;
+	FTimerHandle DeathCameraHandle;
+
+	void DeathCamera();
+
+	DECLARE_DYNAMIC_MULTICAST_DELEGATE(FGameOverDelegate);
+	UPROPERTY(BlueprintAssignable)
+	FGameOverDelegate GameOver;
+	
 };

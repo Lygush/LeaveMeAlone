@@ -5,8 +5,9 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "Weapon/LMABaseWeapon.h"
-
 #include "LMAWeaponComponent.generated.h"
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnBulletsChangeDelegate, int32, Bullets);
 
 UCLASS(ClassGroup = (Custom), meta = (BlueprintSpawnableComponent))
 class LEAVEMEALONE_API ULMAWeaponComponent : public UActorComponent
@@ -30,13 +31,15 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 	UAnimMontage* ReloadMontage;
-	bool AnimReloading = false;
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Weapon")
 	float ShootDelay = 0.1f;
 
 	FTimerHandle ShootTimerHandle;
 	FTimerDelegate ShootTimerDelegate;
+
+	UFUNCTION(BlueprintCallable)
+	bool GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const;
 	
 public:
 	void SpawnWeapon();
@@ -48,9 +51,17 @@ public:
 	bool CanReload() const;
 
 	void Fire();
+	UFUNCTION(BlueprintCallable)
 	void StopFire();
+	UFUNCTION(BlueprintCallable)
 	void StartFire();
 
 	UFUNCTION()
 	void OnEmtyClipHandler();
+
+	bool AnimReloading = false;
+	bool Death = false;
+
+	UPROPERTY(BlueprintAssignable);
+	FOnBulletsChangeDelegate OnBulletsChange;
 };

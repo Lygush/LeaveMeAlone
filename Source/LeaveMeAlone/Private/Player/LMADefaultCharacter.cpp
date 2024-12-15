@@ -46,9 +46,8 @@ void ALMADefaultCharacter::BeginPlay()
 	{
 		CurrentCursor = UGameplayStatics::SpawnDecalAtLocation(GetWorld(), CursorMaterial, CursorSize, FVector(0));
 	}
-	HealthComponent->OnDeath.AddUObject(this, &ALMADefaultCharacter::OnDeath);
-	OnHealthChanged(HealthComponent->GetHealth());
-	HealthComponent->OnHealthChanged.AddUObject(this, &ALMADefaultCharacter::OnHealthChanged);
+	HealthComponent->OnDeath.AddDynamic(this, &ALMADefaultCharacter::OnDeath);
+	DeathCameraDelegate = FTimerDelegate::CreateUObject(this, &ALMADefaultCharacter::DeathCamera);
 }
 
 void ALMADefaultCharacter::Tick(float DeltaTime)
@@ -57,14 +56,6 @@ void ALMADefaultCharacter::Tick(float DeltaTime)
 	if (!(HealthComponent->IsDead()))
 	{
 		RotationPlayerOnCursor();
-	}
-	if (SprintOn)
-	{
-		StaminaComponent->SetStamina(StaminaComponent->GetStamina() - StaminaComponent->GetStaminaStep());
-	}
-	else if (StaminaComponent->GetStamina() < StaminaComponent->GetMaxStamina())
-	{
-		StaminaComponent->SetStamina(StaminaComponent->GetStamina() + StaminaComponent->GetStaminaStep());
 	}
 }
 
@@ -77,8 +68,8 @@ void ALMADefaultCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("ZoomUp", IE_Pressed, this, &ALMADefaultCharacter::ZoomUp);
 	PlayerInputComponent->BindAction("ZoomDown", IE_Pressed, this, &ALMADefaultCharacter::ZoomDown);
 
-	PlayerInputComponent->BindAction("Sprint", IE_Pressed, this, &ALMADefaultCharacter::ShiftOn);
-	PlayerInputComponent->BindAction("Sprint", IE_Released, this, &ALMADefaultCharacter::ShiftOff);
+	PlayerInputComponent->BindAction("Sprint", IE_Pressed, StaminaComponent, &ULMAStaminaComponent::StartSprint);
+	PlayerInputComponent->BindAction("Sprint", IE_Released, StaminaComponent, &ULMAStaminaComponent::StopSprint);
 
 	PlayerInputComponent->BindAction("Fire", IE_Pressed, WeaponComponent, &ULMAWeaponComponent::StartFire);
 	PlayerInputComponent->BindAction("Fire", IE_Released, WeaponComponent, &ULMAWeaponComponent::StopFire);
@@ -86,33 +77,42 @@ void ALMADefaultCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 	PlayerInputComponent->BindAction("Reload", IE_Pressed, WeaponComponent, &ULMAWeaponComponent::Reload);
 }
 
+void ALMADefaultCharacter::SetCharacterMaxWalkSpeed(float Speed)
+{
+	GetCharacterMovement()->MaxWalkSpeed = Speed;
+}
+
+bool ALMADefaultCharacter::GetCharacterForwardDirection()
+{
+	return IsMoveForward;
+}
+
 void ALMADefaultCharacter::MoveForward(float Value)
 {
 	AddMovementInput(GetActorForwardVector(), Value);
-	if ((Value > 0) && Shift && (StaminaComponent->GetStamina() > 0))
+	if (Value == 1)
 	{
-		GetCharacterMovement()->MaxWalkSpeed = SprintSpeed;
-		SprintOn = true;
+		IsMoveForward = true;
+		if (StaminaComponent->SprintOn)
+		{
+			StaminaComponent->StartSprint();
+		}
 	}
 	else
 	{
-		GetCharacterMovement()->MaxWalkSpeed = WalkSpeed;
-		SprintOn = false;
+		IsMoveForward = false;
+		if (StaminaComponent->SprintOn)
+		{
+			StaminaComponent->StopSprint();
+		}
 	}
 }
 void ALMADefaultCharacter::MoveRight(float Value)
 {
-	AddMovementInput(GetActorRightVector(), Value);
-}
-
-void ALMADefaultCharacter::ShiftOn()
-{
-	Shift = true;
-}
-
-void ALMADefaultCharacter::ShiftOff()
-{
-	Shift = false;
+	if (!StaminaComponent->SprintOn)
+	{
+		AddMovementInput(GetActorRightVector(), Value);
+	}
 }
 
 void ALMADefaultCharacter::ZoomUp()
@@ -135,15 +135,13 @@ void ALMADefaultCharacter::OnDeath()
 {
 	PlayAnimMontage(DeathMontage);
 	GetCharacterMovement()->DisableMovement();
-	SetLifeSpan(5.0f);
 	CurrentCursor->DestroyRenderState_Concurrent();
-	PlayAnimMontage(DeathMontage);
-	GetCharacterMovement()->DisableMovement();
-	SetLifeSpan(5.0f);
-	if (Controller)
-	{
-		Controller->ChangeState(NAME_Spectating);
-	}
+	DestroyPlayerInputComponent();
+	GetWorld()->GetTimerManager().SetTimer(DeathCameraHandle, DeathCameraDelegate, 0.01, true, 0.0f);
+	DeathCameraArmLenght = SpringArmComponent->TargetArmLength;
+	WeaponComponent->Death = true;
+	WeaponComponent->StartFire();
+	DeathLocation = SpringArmComponent->GetRelativeLocation();
 }
 
 void ALMADefaultCharacter::RotationPlayerOnCursor()
@@ -162,7 +160,31 @@ void ALMADefaultCharacter::RotationPlayerOnCursor()
 	}
 }
 
-void ALMADefaultCharacter::OnHealthChanged(float NewHealth)
+void ALMADefaultCharacter::DeathCamera()
 {
-	GEngine->AddOnScreenDebugMessage(-1, 2.0f, FColor::Red, FString::Printf(TEXT("Health = %f"), NewHealth));
+	{
+		if (DeathCameraArmLenght > 800.0f && !DeathMinZoom)
+		{
+			DeathCameraArmLenght -= 3.0f;
+			if (DeathCameraArmLenght <= 1200.0f)
+			{
+				DeathLocation.X -= 1.0f;
+			}
+		}
+		else
+		{
+			DeathMinZoom = true;
+			DeathCameraYaw += 0.2f;
+			DeathCameraArmLenght += 1.0f;
+		}
+		SpringArmComponent->TargetArmLength = DeathCameraArmLenght;
+		SpringArmComponent->SetRelativeRotation(FRotator(-75.0, DeathCameraYaw, 0.0f));
+		SpringArmComponent->SetRelativeLocation(DeathLocation);
+		if (DeathCameraArmLenght >= 1700.0f && DeathMinZoom)
+		{
+			GetWorld()->GetTimerManager().ClearTimer(DeathCameraHandle);
+			SetLifeSpan(0.0f);
+			GameOver.Broadcast();
+		}
+	}
 }

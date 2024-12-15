@@ -1,0 +1,29 @@
+{
+    "includePath": [ 
+     "${workspaceFolder}\\Intermediate\\**", 
+     "${workspaceFolder}\\Plugins\\**", 
+     "${workspaceFolder}\\Source\\**" 
+ ],
+    "configurations": [
+        {
+            "name": "LeaveMeAloneEditor Editor Win64 Development (LeaveMeAlone)",
+            "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "configurationProvider": "epic.ue",
+            "compileCommands": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone.json"
+        },
+        {
+            "name": "Win32",
+            "compilerPath": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "msvc-x64",
+            "configurationProvider": "epic.ue",
+            "compileCommands": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_Default.json"
+        }
+        
+    ],
+    "version": 4
+}

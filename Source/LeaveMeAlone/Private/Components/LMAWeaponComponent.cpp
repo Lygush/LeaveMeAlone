@@ -4,6 +4,7 @@
 #include "Player/LMADefaultCharacter.h"
 #include "Weapon/LMABaseWeapon.h"
 #include <Animations/LMAReloadFinishedAnimNotify.h>
+#include "Components/LMAStaminaComponent.h"
 
 ULMAWeaponComponent::ULMAWeaponComponent()
 {
@@ -16,6 +17,17 @@ void ULMAWeaponComponent::BeginPlay()
 	Super::BeginPlay();
 	SpawnWeapon();
 	InitAnimNotify();
+	OnBulletsChange.Broadcast(Weapon->CurrentAmmoWeapon.Bullets);
+}
+
+bool ULMAWeaponComponent::GetCurrentWeaponAmmo(FAmmoWeapon& AmmoWeapon) const
+{
+	if (Weapon)
+	{
+		AmmoWeapon = Weapon->GetCurrentAmmoWeapon();
+		return true;
+	}
+	return false;
 }
 
 void ULMAWeaponComponent::SpawnWeapon()
@@ -39,9 +51,13 @@ void ULMAWeaponComponent::SpawnWeapon()
 void ULMAWeaponComponent::Fire()
 {
 	const auto Character = Cast<ALMADefaultCharacter>(GetOwner());
-	if (Weapon && !AnimReloading && !Character->SprintOn)
+	if (Character)
 	{
-		Weapon->Fire();
+		if (Weapon && !AnimReloading && !Character->GetStaminaComponent()->SprintOn)
+		{
+			Weapon->Fire();
+			OnBulletsChange.Broadcast(Weapon->CurrentAmmoWeapon.Bullets);
+		}
 	}
 }
 
@@ -94,7 +110,14 @@ bool ULMAWeaponComponent::CanReload() const
 		return false;
 	}
 	const auto Character = Cast<ALMADefaultCharacter>(GetOwner());
-	if (Character->SprintOn)
+	if (Character)
+	{
+		if (Character->GetStaminaComponent()->SprintOn)
+		{
+			return false;
+		}
+	}
+	if (Death)
 	{
 		return false;
 	}
@@ -114,4 +137,5 @@ void ULMAWeaponComponent::AutoReload()
 	AnimReloading = true;
 	ACharacter* Character = Cast<ACharacter>(GetOwner());
 	Character->PlayAnimMontage(ReloadMontage);
+	OnBulletsChange.Broadcast(Weapon->CurrentAmmoWeapon.Bullets);
 }

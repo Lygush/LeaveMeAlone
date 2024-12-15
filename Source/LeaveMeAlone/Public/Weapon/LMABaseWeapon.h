@@ -6,6 +6,7 @@
 #include "GameFramework/Actor.h"
 #include "LMABaseWeapon.generated.h"
 
+
 DECLARE_DYNAMIC_MULTICAST_DELEGATE(FEmptyClipDelegate);
 
 USTRUCT(BlueprintType)
@@ -57,5 +58,8 @@ public:
 	void ChangeClip();
 	bool FullClip() const;
 
+	UPROPERTY(BlueprintAssignable);
 	FEmptyClipDelegate EmptyClip;
+
+	FAmmoWeapon GetCurrentAmmoWeapon() const { return CurrentAmmoWeapon; }
 };

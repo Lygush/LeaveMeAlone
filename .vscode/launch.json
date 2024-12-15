@@ -1,0 +1,152 @@
+{
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"name": "Launch LeaveMeAlone (Debug)",
+			"request": "launch",
+			"program": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+			"preLaunchTask": "LeaveMeAlone Win64 Debug Build",
+			"args": [
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAlone (DebugGame)",
+			"request": "launch",
+			"program": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+			"preLaunchTask": "LeaveMeAlone Win64 DebugGame Build",
+			"args": [
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAlone (Development)",
+			"request": "launch",
+			"program": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Binaries\\Win64\\UnrealGame.exe",
+			"preLaunchTask": "LeaveMeAlone Win64 Development Build",
+			"args": [
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAlone (Test)",
+			"request": "launch",
+			"program": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+			"preLaunchTask": "LeaveMeAlone Win64 Test Build",
+			"args": [
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAlone (Shipping)",
+			"request": "launch",
+			"program": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+			"preLaunchTask": "LeaveMeAlone Win64 Shipping Build",
+			"args": [
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAloneEditor (Debug)",
+			"request": "launch",
+			"program": "E:\\UE\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+			"preLaunchTask": "LeaveMeAloneEditor Win64 Debug Build",
+			"args": [
+				"E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\LeaveMeAlone.uproject"
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAloneEditor (DebugGame)",
+			"request": "launch",
+			"program": "E:\\UE\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+			"preLaunchTask": "LeaveMeAloneEditor Win64 DebugGame Build",
+			"args": [
+				"E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\LeaveMeAlone.uproject"
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Launch LeaveMeAloneEditor (Development)",
+			"request": "launch",
+			"program": "E:\\UE\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+			"preLaunchTask": "LeaveMeAloneEditor Win64 Development Build",
+			"args": [
+				"E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\LeaveMeAlone.uproject"
+			],
+			"cwd": "E:\\UE\\UE_5.2",
+			"stopAtEntry": false,
+			"console": "externalTerminal",
+			"type": "cppvsdbg",
+			"visualizerFile": "E:\\UE\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+			"sourceFileMap": {
+				"D:\\build\\++UE5\\Sync": "E:\\UE\\UE_5.2"
+			}
+		},
+		{
+			"name": "Generate Project Files",
+			"type": "coreclr",
+			"request": "launch",
+			"program": "E:\\UE\\UE_5.2\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+			"args": [
+				"-projectfiles",
+				"-vscode",
+				"-project=E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\LeaveMeAlone.uproject",
+				"-game",
+				"-engine"
+			],
+			"console": "externalTerminal",
+			"stopAtEntry": false,
+			"cwd": "E:\\UE\\UE_5.2"
+		}
+	]
+}

@@ -1,0 +1,186 @@
+[
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\LMAGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\LMAGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\LeaveMeAlone.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\LeaveMeAlone.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\LeaveMeAlone.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Animations\\LMAReloadFinishedAnimNotify.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Components\\LMAHealthComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Components\\LMAStaminaComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Components\\LMAWeaponComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\LevelActors\\Damage\\LMADamageActor.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\LevelActors\\Pickup\\LMAHealthPickup.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Player\\LMADefaultCharacter.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Player\\LMAPlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Private\\Weapon\\LMABaseWeapon.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Animations\\LMAReloadFinishedAnimNotify.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Components\\LMAHealthComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Components\\LMAStaminaComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Components\\LMAWeaponComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\LevelActors\\Damage\\LMADamageActor.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\LevelActors\\Pickup\\LMAHealthPickup.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Player\\LMADefaultCharacter.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Player\\LMAPlayerController.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	},
+	{
+		"file": "E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\Source\\LeaveMeAlone\\Public\\Weapon\\LMABaseWeapon.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.34.31933\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\Stady\\Netology_cpp\\HomeWorks\\HomeWorkUE\\HomeWorkUE-3\\LeaveMeAlone\\.vscode\\compileCommands_LeaveMeAlone\\LeaveMeAlone.261.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.2\\Engine\\Source"
+	}
+]

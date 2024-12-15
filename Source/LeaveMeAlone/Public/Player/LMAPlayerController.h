@@ -6,6 +6,7 @@
 #include "GameFramework/PlayerController.h"
 #include "LMAPlayerController.generated.h"
 
+
 UCLASS()
 class LEAVEMEALONE_API ALMAPlayerController : public APlayerController
 {
